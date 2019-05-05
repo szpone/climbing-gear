@@ -31,4 +31,3 @@ class Gear(models.Model):
     model_name = models.ForeignKey(ModelName, on_delete=models.CASCADE)
     used = models.ManyToManyField(DateTimeLocation)
     image = models.ManyToManyField(Image, blank=True)
-
