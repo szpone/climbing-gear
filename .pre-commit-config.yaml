@@ -1,0 +1,28 @@
+repos:
+- repo: local
+  hooks:
+  - id: black
+    name: Black Autoformatter
+    language: system
+    entry: black
+    args: ['-q']
+    types: [python]
+
+  - id: bandit
+    name: Bandit Vulnerability Check
+    entry: bandit
+    args: ['-ll', '-ii',]
+    language: system
+    types: [python]
+
+  - id: isort
+    name: ISort
+    entry: isort
+    language: system
+    types: [python]
+
+  - id: flake8
+    name: flake8
+    language: system
+    entry: flake8
+    types: [python]

@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+graphene = "*"
+graphene-django = "*"
+pytest = "*"
+pylint = "*"
+pytest-factoryboy = "*"
+bandit = "*"
+"flake8" = "*"
+isort = "*"
+coverage = "*"
+django-extensions = "*"
+pytest-django = "*"
+pytest-cov = "*"
+ipython = "*"
+"psycopg2" = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
