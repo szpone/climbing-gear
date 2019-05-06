@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Company, DateTimeLocation, Gear, GearType, Image, ModelName
+from .models import Company, Usage, Gear, GearType, Image, ModelName
 
 # Register your models here.
 
@@ -25,8 +25,8 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = ("image",)
 
 
-@admin.register(DateTimeLocation)
-class DateTimeLocationAdmin(admin.ModelAdmin):
+@admin.register(Usage)
+class UsageAdmin(admin.ModelAdmin):
     list_display = ("date_used", "location")
 
 
