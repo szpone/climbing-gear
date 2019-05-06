@@ -30,8 +30,8 @@ class Gear(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     model_name = models.ForeignKey(ModelName, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.gear_type.name
+    def get_full_name(self):
+        return f"{self.company.name} {self.model_name.name} {self.gear_type.name}"
 
 
 class Image(models.Model):
