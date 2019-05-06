@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Company, Usage, Gear, GearType, Image, ModelName
+from .models import Company, Gear, GearType, Image, ModelName, Usage
 
 # Register your models here.
 
