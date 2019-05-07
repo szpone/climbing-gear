@@ -1,18 +1,20 @@
 from django.db import models
 
+from users.models import Climber
+
 # Create your models here.
 
 
-class Company(models.Model):
+class Brand(models.Model):
     name = models.CharField(max_length=128)
 
     def __str__(self):
         return self.name
 
 
-class ModelName(models.Model):
+class Make(models.Model):
     name = models.CharField(max_length=128)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    company = models.ForeignKey(Brand, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -27,8 +29,9 @@ class GearType(models.Model):
 
 class Gear(models.Model):
     gear_type = models.ForeignKey(GearType, on_delete=models.CASCADE)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    model_name = models.ForeignKey(ModelName, on_delete=models.CASCADE)
+    company = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    make = models.ForeignKey(Make, on_delete=models.CASCADE)
+    climber = models.ForeignKey(Climber, on_delete=models.CASCADE)
 
     def get_full_name(self):
         return f"{self.company.name} {self.model_name.name} {self.gear_type.name}"

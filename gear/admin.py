@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from .models import Company, Gear, GearType, Image, ModelName, Usage
+from .models import Brand, Gear, GearType, Image, Make, Usage
 
 # Register your models here.
 
 
-@admin.register(Company)
+@admin.register(Brand)
 class CompanyAdmin(admin.ModelAdmin):
     list_display = ("name",)
 
@@ -17,7 +17,7 @@ class GearTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Gear)
 class GearAdmin(admin.ModelAdmin):
-    list_display = ("gear_type", "company", "model_name")
+    list_display = ("gear_type", "company", "make")
 
 
 @admin.register(Image)
@@ -30,6 +30,6 @@ class UsageAdmin(admin.ModelAdmin):
     list_display = ("date_used", "location")
 
 
-@admin.register(ModelName)
+@admin.register(Make)
 class ModelNameAdmin(admin.ModelAdmin):
     list_display = ("name", "company")
