@@ -19,6 +19,7 @@ pytest-django = "*"
 pytest-cov = "*"
 ipython = "*"
 "psycopg2" = "*"
+pillow = "*"
 
 [dev-packages]
 
