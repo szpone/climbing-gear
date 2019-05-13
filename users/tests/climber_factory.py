@@ -1,11 +1,9 @@
 import factory
-from django.contrib.auth import get_user_model
 from factory import DjangoModelFactory
 from faker import Faker
-from .users import Climber
+from climbing_gear.settings import base
 
 faker = Faker()
-# Climber = get_user_model()
 
 
 class ClimberFactory(DjangoModelFactory):
@@ -15,5 +13,5 @@ class ClimberFactory(DjangoModelFactory):
     last_name = factory.Faker("last_name")
 
     class Meta:
-        model = get_user_model()
+        model = base.AUTH_USER_MODEL
         django_get_or_create = ["username"]

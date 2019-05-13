@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.mark.django_db
-def test_get_climber(self, graph_client, climber):
+def test_get_climber(graph_client, climber):
     query = (
         """
             query {
