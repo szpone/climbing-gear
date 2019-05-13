@@ -21,6 +21,7 @@ ipython = "*"
 "psycopg2" = "*"
 pillow = "*"
 faker = "*"
+django-environ = "*"
 
 [dev-packages]
 

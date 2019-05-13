@@ -11,11 +11,11 @@ class ClimberType(DjangoObjectType):
 
 
 class Query(ObjectType):
-    user = graphene.Field(ClimberType, id=graphene.Int())
-    users = graphene.List(ClimberType)
+    climber = graphene.Field(ClimberType, id=graphene.Int())
+    climbers = graphene.List(ClimberType)
 
-    def resolve_climber(self, info, climber_id):
-        return Climber.objects.filter(id=climber_id).first()
+    def resolve_climber(self, info, id):
+        return Climber.objects.filter(id=id).first()
 
     def resolve_climbers(self, info, **kwargs):
         return Climber.objects.all()

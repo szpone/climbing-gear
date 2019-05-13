@@ -29,7 +29,7 @@ class GearType(models.Model):
 
 class Gear(models.Model):
     gear_type = models.ForeignKey(GearType, on_delete=models.CASCADE)
-    company = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     make = models.ForeignKey(Make, on_delete=models.CASCADE)
     climber = models.ForeignKey(Climber, on_delete=models.CASCADE)
 

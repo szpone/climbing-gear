@@ -2,8 +2,10 @@ import factory
 from django.contrib.auth import get_user_model
 from factory import DjangoModelFactory
 from faker import Faker
+from .users import Climber
 
 faker = Faker()
+# Climber = get_user_model()
 
 
 class ClimberFactory(DjangoModelFactory):
