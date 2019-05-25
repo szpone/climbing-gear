@@ -28,7 +28,7 @@ class GearCategory(models.Model):
 
 
 class Gear(models.Model):
-    gear_type = models.ForeignKey(GearCategory, on_delete=models.CASCADE)
+    gear_category = models.ForeignKey(GearCategory, on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     model = models.ForeignKey(Model, on_delete=models.CASCADE)
     climber = models.ForeignKey(Climber, on_delete=models.CASCADE)

@@ -17,7 +17,7 @@ class GearTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Gear)
 class GearAdmin(admin.ModelAdmin):
-    list_display = ("gear_type", "brand", "model")
+    list_display = ("gear_category", "brand", "model")
 
 
 @admin.register(Image)
