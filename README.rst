@@ -14,7 +14,7 @@ Domain vocabulary
 
 - *Climber* is a user who can authenticate, manage its account, create, delete, update *Gear*
 - *Gear* represents all *Climber's* climbing gear
-- *GearType* describes the kind of *Gear*
+- *GearCategory* describes the kind of *Gear*
 - *Brand* is a company which manufactured a given piece of *Gear*
 - *Made* is the name of given *Gear* model
 - *Usage* describes dates and locations when given piece of *Gear* was used
