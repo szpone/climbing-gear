@@ -16,7 +16,7 @@ Domain vocabulary
 - *Gear* represents all *Climber's* climbing gear
 - *GearType* describes the kind of *Gear*
 - *Brand* is a company which manufactured a given piece of *Gear*
-- *Make* is the name of given *Gear* model
+- *Made* is the name of given *Gear* model
 - *Usage* describes dates and locations when given piece of *Gear* was used
 - *Image* shows *Gear* in current condition
 

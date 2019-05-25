@@ -12,15 +12,15 @@ class Brand(models.Model):
         return self.name
 
 
-class Make(models.Model):
+class Model(models.Model):
     name = models.CharField(max_length=128)
-    company = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
 
-class GearType(models.Model):
+class GearCategory(models.Model):
     name = models.CharField(max_length=64)
 
     def __str__(self):
@@ -28,13 +28,13 @@ class GearType(models.Model):
 
 
 class Gear(models.Model):
-    gear_type = models.ForeignKey(GearType, on_delete=models.CASCADE)
+    gear_type = models.ForeignKey(GearCategory, on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
-    make = models.ForeignKey(Make, on_delete=models.CASCADE)
+    model = models.ForeignKey(Model, on_delete=models.CASCADE)
     climber = models.ForeignKey(Climber, on_delete=models.CASCADE)
 
     def get_full_name(self):
-        return f"{self.company.name} {self.model_name.name} {self.gear_type.name}"
+        return f"{self.brand.name} {self.model.name} {self.gear_type.name}"
 
 
 class Image(models.Model):
