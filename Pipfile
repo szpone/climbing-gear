@@ -22,6 +22,7 @@ ipython = "*"
 pillow = "*"
 faker = "*"
 django-environ = "*"
+django-choices = "*"
 
 [dev-packages]
 

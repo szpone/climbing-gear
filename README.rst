@@ -16,7 +16,7 @@ Domain vocabulary
 - *Gear* represents all *Climber's* climbing gear
 - *GearCategory* describes the kind of *Gear*
 - *Brand* is a company which manufactured a given piece of *Gear*
-- *Made* is the name of given *Gear* model
+- *Model* is the name of given *Gear* model
 - *Usage* describes dates and locations when given piece of *Gear* was used
 - *Image* shows *Gear* in current condition
 
@@ -25,7 +25,6 @@ Domain vocabulary
 MVP
 -------------------
 
-- Authentication
 - Simple CRUD API for *Climbers* and *Gear* (only simple info like *Brand* or *Make*)
 - Test covering the most crucial parts of the application
 

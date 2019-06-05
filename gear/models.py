@@ -1,6 +1,9 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
+
 
 from users.models import Climber
+
 
 # Create your models here.
 
@@ -22,12 +25,14 @@ class Model(models.Model):
 
 class GearCategory(models.Model):
     name = models.CharField(max_length=64)
+    features = JSONField(null=True, blank=True)
 
     def __str__(self):
         return self.name
 
 
 class Gear(models.Model):
+
     gear_category = models.ForeignKey(GearCategory, on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     model = models.ForeignKey(Model, on_delete=models.CASCADE)
