@@ -14,9 +14,9 @@ Domain vocabulary
 
 - *Climber* is a user who can authenticate, manage its account, create, delete, update *Gear*
 - *Gear* represents all *Climber's* climbing gear
-- *GearType* describes the kind of *Gear*
+- *GearCategory* describes the kind of *Gear*
 - *Brand* is a company which manufactured a given piece of *Gear*
-- *Make* is the name of given *Gear* model
+- *Model* is the name of given *Gear* model
 - *Usage* describes dates and locations when given piece of *Gear* was used
 - *Image* shows *Gear* in current condition
 
@@ -25,7 +25,6 @@ Domain vocabulary
 MVP
 -------------------
 
-- Authentication
 - Simple CRUD API for *Climbers* and *Gear* (only simple info like *Brand* or *Make*)
 - Test covering the most crucial parts of the application
 
