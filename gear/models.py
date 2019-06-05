@@ -1,37 +1,45 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
+
+
+from users.models import Climber
+
 
 # Create your models here.
 
 
-class Company(models.Model):
+class Brand(models.Model):
     name = models.CharField(max_length=128)
 
     def __str__(self):
         return self.name
 
 
-class ModelName(models.Model):
+class Model(models.Model):
     name = models.CharField(max_length=128)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
 
-class GearType(models.Model):
+class GearCategory(models.Model):
     name = models.CharField(max_length=64)
+    features = JSONField(null=True, blank=True)
 
     def __str__(self):
         return self.name
 
 
 class Gear(models.Model):
-    gear_type = models.ForeignKey(GearType, on_delete=models.CASCADE)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    model_name = models.ForeignKey(ModelName, on_delete=models.CASCADE)
+
+    gear_category = models.ForeignKey(GearCategory, on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    model = models.ForeignKey(Model, on_delete=models.CASCADE)
+    climber = models.ForeignKey(Climber, on_delete=models.CASCADE)
 
     def get_full_name(self):
-        return f"{self.company.name} {self.model_name.name} {self.gear_type.name}"
+        return f"{self.brand.name} {self.model.name} {self.gear_type.name}"
 
 
 class Image(models.Model):

@@ -20,6 +20,9 @@ pytest-cov = "*"
 ipython = "*"
 "psycopg2" = "*"
 pillow = "*"
+faker = "*"
+django-environ = "*"
+django-choices = "*"
 
 [dev-packages]
 
